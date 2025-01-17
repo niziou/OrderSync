@@ -60,4 +60,12 @@ class User
         $this->email = $email;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return "{$this->firstName} {$this->lastName} <{$this->email}>";
+    }
 }
